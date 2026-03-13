@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eslam Mesalam | Front-End Developer</title>
+  <meta name="description" content="Eslam Mesalam Front-End Developer Portfolio" />
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg2:#0c1830;
+      --card:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.10);
+      --text:#ffffff;
+      --muted:#b9c4dc;
+      --blue:#6ea8ff;
+      --purple:#8f6bff;
+      --shadow:0 16px 40px rgba(0,0,0,.28);
+      --radius:22px;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(110,168,255,.14), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(143,107,255,.12), transparent 25%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:min(1100px, 92%);
+      margin:auto;
+    }
+
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(7,17,31,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-wrap{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:18px 0;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:800;
+    }
+
+    .logo span{
+      color:var(--blue);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .nav-links a{
+      color:#dce7fb;
+      font-size:15px;
+    }
+
+    .hero{
+      padding:60px 0 30px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      color:#eef4ff;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    .hero-text h1{
+      font-size:62px;
+      line-height:1.02;
+      margin-bottom:12px;
+    }
+
+    .hero-text h1 span{
+      background:linear-gradient(135deg,#fff,#9dc4ff,#c6b2ff);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .hero-text h2{
+      font-size:28px;
+      color:#bdd4ff;
+      line-height:1.35;
+      margin-bottom:16px;
+    }
+
+    .hero-text p{
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.9;
+      margin-bottom:24px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:16px;
+      font-weight:700;
+      border:1px solid var(--border);
+      transition:.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--blue),var(--purple));
+      border:none;
+      box-shadow:0 12px 30px rgba(110,168,255,.2);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.04);
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .stat{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+
+    .stat h3{
+      font-size:28px;
+      margin-bottom:6px;
+    }
+
+    .stat p{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .hero-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border:1px solid var(--border);
+      border-radius:28px;
+      padding:16px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-image{
+      border-radius:22px;
+      overflow:hidden;
+      background:#111827;
+    }
+
+    .hero-image img{
+      width:100%;
+      height:500px;
+      object-fit:cover;
+      object-position:center top;
+    }
+
+    .profile-fallback{
+      display:none;
+      width:100%;
+      height:500px;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:12px;
+      text-align:center;
+      padding:20px;
+      background:linear-gradient(135deg, rgba(110,168,255,.14), rgba(143,107,255,.14));
+    }
+
+    .fallback-circle{
+      width:100px;
+      height:100px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      font-size:38px;
+      font-weight:800;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    .mini-panel{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+
+    .mini-box{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px;
+      text-align:center;
+    }
+
+    .mini-box strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:16px;
+    }
+
+    .mini-box span{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .section{
+      padding:80px 0;
+    }
+
+    .section-title{
+      font-size:40px;
+      text-align:center;
+      margin-bottom:12px;
+    }
+
+    .section-subtitle{
+      max-width:760px;
+      margin:0 auto 40px;
+      text-align:center;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.9;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .card,
+    .highlight,
+    .skill-card,
+    .service-card,
+    .project-card,
+    .contact-card,
+    .cta-box{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .card{
+      padding:26px;
+    }
+
+    .about-text{
+      color:var(--muted);
+      line-height:2;
+      font-size:17px;
+    }
+
+    .highlights{
+      display:grid;
+      gap:16px;
+    }
+
+    .highlight{
+      padding:20px;
+    }
+
+    .highlight h3{
+      margin-bottom:8px;
+      font-size:20px;
+    }
+
+    .highlight p{
+      color:var(--muted);
+      line-height:1.8;
+      font-size:15px;
+    }
+
+    .skills-grid,
+    .services-grid,
+    .projects-grid,
+    .contact-grid{
+      display:grid;
+      gap:18px;
+    }
+
+    .skills-grid{
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    }
+
+    .services-grid{
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    }
+
+    .projects-grid{
+      grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+    }
+
+    .contact-grid{
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    }
+
+    .skill-card,
+    .service-card,
+    .contact-card{
+      padding:22px;
+      text-align:center;
+    }
+
+    .skill-icon{
+      width:60px;
+      height:60px;
+      margin:0 auto 14px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      font-size:22px;
+      font-weight:800;
+      background:linear-gradient(135deg, rgba(110,168,255,.18), rgba(143,107,255,.18));
+    }
+
+    .skill-card h3,
+    .service-card h3,
+    .contact-card h3{
+      margin-bottom:8px;
+      font-size:20px;
+    }
+
+    .skill-card p,
+    .service-card p,
+    .contact-card a{
+      color:var(--muted);
+      line-height:1.8;
+      font-size:14px;
+    }
+
+    .project-card{
+      overflow:hidden;
+    }
+
+    .project-cover{
+      height:220px;
+      background:
+        linear-gradient(rgba(5,10,18,.2), rgba(5,10,18,.2)),
+        url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+    }
+
+    .project-cover.two{
+      background:
+        linear-gradient(rgba(5,10,18,.2), rgba(5,10,18,.2)),
+        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+    }
+
+    .project-body{
+      padding:22px;
+    }
+
+    .project-tag{
+      display:inline-block;
+      margin-bottom:10px;
+      color:#b8d2ff;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .project-body h3{
+      font-size:26px;
+      margin-bottom:10px;
+    }
+
+    .project-body p{
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.8;
+      margin-bottom:14px;
+    }
+
+    .project-list{
+      list-style:none;
+      display:grid;
+      gap:8px;
+      margin-bottom:18px;
+    }
+
+    .project-list li{
+      color:#dce6fb;
+      position:relative;
+      padding-left:16px;
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    .project-list li::before{
+      content:"•";
+      position:absolute;
+      left:0;
+      color:var(--blue);
+    }
+
+    .project-actions,
+    .cta-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .cta{
+      margin-top:34px;
+    }
+
+    .cta-box{
+      padding:30px;
+      text-align:center;
+    }
+
+    .cta-box h3{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .cta-box p{
+      color:var(--muted);
+      line-height:1.9;
+      margin-bottom:16px;
+    }
+
+    .footer{
+      padding:28px 0 40px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      text-align:center;
+      font-size:15px;
+    }
+
+    @media (max-width: 900px){
+      .hero-grid,
+      .about-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-text{
+        text-align:center;
+      }
+
+      .hero-actions,
+      .project-actions,
+      .cta-actions{
+        justify-content:center;
+      }
+
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+
+      .hero-card{
+        max-width:420px;
+        margin:auto;
+      }
+    }
+
+    @media (max-width: 600px){
+      .nav-wrap{
+        flex-direction:column;
+      }
+
+      .nav-links{
+        gap:14px;
+      }
+
+      .hero{
+        padding-top:40px;
+      }
+
+      .hero-text h1{
+        font-size:44px;
+      }
+
+      .hero-text h2{
+        font-size:22px;
+      }
+
+      .hero-text p{
+        font-size:16px;
+      }
+
+      .hero-image img,
+      .profile-fallback{
+        height:360px;
+      }
+
+      .mini-panel{
+        grid-template-columns:1fr;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .hero-actions,
+      .project-actions,
+      .cta-actions{
+        flex-direction:column;
+      }
+
+      .section{
+        padding:70px 0;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <div class="logo">Eslam<span>.</span></div>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="badge">Available for freelance & front-end opportunities</span>
+        <h1>Hi, I'm <span>Eslam Mesalam</span></h1>
+        <h2>Front-End Developer crafting modern websites with clean design and smooth experience.</h2>
+        <p>
+          I build responsive, elegant, and professional websites using HTML, CSS, and JavaScript.
+          My goal is to turn ideas into real digital experiences that look premium, feel smooth,
+          and help brands stand out online.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          <a href="cv.pdf" download class="btn btn-secondary">Download CV</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>2+</h3>
+            <p>Featured Projects</p>
+          </div>
+          <div class="stat">
+            <h3>6+</h3>
+            <p>Core Skills</p>
+          </div>
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Passion & Growth</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-image">
+          <img src="profile.jpg" alt="Eslam Mesalam"
+               onerror="this.style.display='none'; document.getElementById('fallbackProfile').style.display='flex';">
+          <div class="profile-fallback" id="fallbackProfile">
+            <div class="fallback-circle">EM</div>
+            <h3>Eslam Mesalam</h3>
+            <p>ضع الصورة باسم profile.jpg داخل نفس الفولدر</p>
+          </div>
+        </div>
+
+        <div class="mini-panel">
+          <div class="mini-box">
+            <strong>UI Focus</strong>
+            <span>Modern clean design</span>
+          </div>
+          <div class="mini-box">
+            <strong>Responsive</strong>
+            <span>Mobile & desktop ready</span>
+          </div>
+          <div class="mini-box">
+            <strong>Fast Learner</strong>
+            <span>Always improving</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">
+        A short introduction about who I am and the type of web experiences I enjoy building.
+      </p>
+
+      <div class="about-grid">
+        <div class="card">
+          <p class="about-text">
+            I am a passionate Front-End Developer with a strong interest in building visually attractive,
+            responsive, and user-friendly websites. I enjoy turning ideas into modern digital experiences
+            through clean layouts, strong typography, and smooth interfaces. I focus on creating websites
+            that are not only beautiful, but also practical, fast, and professional. My goal is to keep
+            growing through real projects and deliver front-end work that reflects quality and attention to detail.
+          </p>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight">
+            <h3>Clean Design</h3>
+            <p>I care about strong layout, elegant spacing, premium sections, and polished visual details.</p>
+          </div>
+
+          <div class="highlight">
+            <h3>Responsive Experience</h3>
+            <p>I build websites that look great and work smoothly across mobile phones, tablets, and desktop screens.</p>
+          </div>
+
+          <div class="highlight">
+            <h3>Growth Mindset</h3>
+            <p>I am constantly learning, practicing, and improving my front-end skills through real projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      <p class="section-subtitle">
+        Technologies and strengths I use to create modern, high-quality user interfaces.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">H</div>
+          <h3>HTML5</h3>
+          <p>Building semantic, well-structured, and accessible page layouts.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">C</div>
+          <h3>CSS3</h3>
+          <p>Creating stylish layouts, responsive sections, and polished visual design.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">J</div>
+          <h3>JavaScript</h3>
+          <p>Adding interaction, dynamic features, and smooth functionality to websites.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">R</div>
+          <h3>Responsive Design</h3>
+          <p>Ensuring websites work beautifully across all screen sizes.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">U</div>
+          <h3>UI Design</h3>
+          <p>Designing clean, premium-looking interfaces with strong visual hierarchy.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">G</div>
+          <h3>GitHub</h3>
+          <p>Hosting projects, sharing code, and building a professional developer profile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title">What I Can Do</h2>
+      <p class="section-subtitle">
+        Services and front-end work I can provide for brands, personal projects, and modern websites.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Landing Pages</h3>
+          <p>I can build elegant landing pages for products, services, and businesses with a modern premium look.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Portfolio Websites</h3>
+          <p>I create personal portfolio websites that present skills, projects, and contact info professionally.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>E-Commerce Interfaces</h3>
+          <p>I design and build front-end store layouts with product sections, shopping cart UI, and responsive design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">
+        Real work that reflects my current front-end direction and design style.
+      </p>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-cover"></div>
+          <div class="project-body">
+            <span class="project-tag">E-Commerce Front-End Project</span>
+            <h3>Style Mix Store</h3>
+            <p>
+              A modern fashion store interface built with HTML, CSS, and JavaScript. The project includes
+              a stylish layout, product section, shopping cart interaction, and responsive design.
+            </p>
+            <ul class="project-list">
+              <li>Modern and elegant fashion store layout</li>
+              <li>Responsive design for mobile and desktop</li>
+              <li>Interactive shopping cart functionality</li>
+              <li>Clean structure and polished user interface</li>
+            </ul>
+            <div class="project-actions">
+              <a href="https://github.com/semo1682" target="_blank" class="btn btn-primary">View GitHub</a>
+              <a href="#contact" class="btn btn-secondary">Hire Me</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-cover two"></div>
+          <div class="project-body">
+            <span class="project-tag">Personal Brand Project</span>
+            <h3>Portfolio Website</h3>
+            <p>
+              A premium personal portfolio website designed to present my skills, services, projects,
+              and contact information in a clean and professional way.
+            </p>
+            <ul class="project-list">
+              <li>Modern hero section and strong visual style</li>
+              <li>Responsive layout for mobile users</li>
+              <li>Professional services and contact sections</li>
+              <li>Built to support personal branding</li>
+            </ul>
+            <div class="project-actions">
+              <a href="https://github.com/semo1682" target="_blank" class="btn btn-primary">View GitHub</a>
+              <a href="#contact" class="btn btn-secondary">Work With Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="sec
