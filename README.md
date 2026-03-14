@@ -26,82 +26,56 @@ I enjoy turning ideas into interactive digital experiences using clean and maint
 - Git & GitHub
 - UI / UX Basics
 
----
+## 📂 المشاريع المميزة
 
-📂 Featured Projects
+### 🛍 متجر ستايل ميكس
 
-🛍 Style Mix Store
+![Style Mix](stylemix.jpg)
 
-Modern fashion store landing page.
-
-"Style Mix" (stylemix.jpg)
-
-🔗 Live Demo
+🔗 عرض مباشر  
 https://semo1682.github.io/style-mix-store/
 
 ---
 
-🎬 Movie Explorer App
+### 🎬 تطبيق مستكشف الأفلام
 
-Movie search application using TMDB API to display movie posters, ratings, and descriptions.
+![Movie Explorer](movie-explorer.jpg)
 
-"Movie Explorer" (movie-explorer.jpg)
-
-🔗 Live Demo
+🔗 عرض مباشر  
 https://semo1682.github.io/movie-explorer-app/
 
 ---
 
-📊 Finance Dashboard
+### 📊 لوحة معلومات مالية
 
-Modern financial dashboard interface displaying revenue and analytics.
+![Finance Dashboard](finance-dashboard.jpg)
 
-"Finance Dashboard" (finance-dashboard.jpg)
-
-🔗 Live Demo
+🔗 عرض مباشر  
 https://semo1682.github.io/finance-dashboard-pro/
 
 ---
 
-🌤 Weather Forecast Pro
+### 🌤 تطبيق الطقس
 
-Weather application that shows real-time weather information using API.
+![Weather Forecast](weather-forecast.jpg)
 
-"Weather Forecast" (weather-forecast.jpg)
-
-🔗 Live Demo
+🔗 عرض مباشر  
 https://semo1682.github.io/weather-forecast-pro/
 
 ---
 
-🚀 NexaFlow Landing Page
+### 🖥 لوحة تحكم الادمن
 
-Modern SaaS startup landing page design.
+![Admin Dashboard](admin-dashboard.jpg)
 
-"NexaFlow" (nexaflow.jpg)
-
-🔗 Live Demo
-https://semo1682.github.io/NexaFlow-Landing-Page/
-
----
-
-🖥 Admin Dashboard
-
-Admin dashboard interface with modern UI layout.
-
-"Admin Dashboard" (admin-dashboard.jpg)
-
-🔗 Live Demo
+🔗 عرض مباشر  
 https://semo1682.github.io/admin-dashboard/
 
 ---
 
-✅ Task Manager Pro
+### ✅ مدير المهام
 
-Task management application to organize daily tasks.
-
-"Task Manager" (task-manager.jpg)
-
+![Task Manager](task-manager.jpg)
 ---
 
 📫 Contact
