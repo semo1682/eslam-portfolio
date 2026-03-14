@@ -1,23 +1,23 @@
-👨‍💻 Eslam Mesalam — Front-End Developer Portfolio
+# 👨‍💻 Eslam Mesalam — Front-End Developer Portfolio
 
-Welcome to my portfolio repository.
-This repository showcases my front-end development projects built using modern web technologies like HTML, CSS, and JavaScript.
+Welcome to my portfolio repository.  
+This repository showcases my **front-end development projects** built using modern web technologies such as **HTML, CSS, and JavaScript**.
 
-🌐 Live Portfolio Website
+🌐 **Live Portfolio Website**  
 https://semo1682.github.io/eslam-portfolio/
 
 ---
 
-🚀 About Me
+## 🚀 About Me
 
-Hi, I'm Eslam Mesalam
-A passionate Front-End Developer from Egypt focused on building modern, responsive, and user-friendly web interfaces.
+Hi, I'm **Eslam Mesalam**, a passionate **Front-End Developer from Egypt**.  
+I focus on building modern, responsive, and user-friendly web interfaces.
 
 I enjoy turning ideas into interactive digital experiences using clean and maintainable code.
 
 ---
 
-🛠 Skills
+## 🛠 Skills
 
 - HTML5
 - CSS3
@@ -26,66 +26,109 @@ I enjoy turning ideas into interactive digital experiences using clean and maint
 - Git & GitHub
 - UI / UX Basics
 
-## 📂 المشاريع المميزة
+---
 
-### 🛍 متجر ستايل ميكس
+## 📂 Featured Projects
+
+### 🛍 Style Mix Store
 
 ![Style Mix](stylemix.jpg)
 
-🔗 عرض مباشر  
+Modern fashion store landing page with a clean design and responsive layout.
+
+🔗 Live Demo  
 https://semo1682.github.io/style-mix-store/
 
 ---
 
-### 🎬 تطبيق مستكشف الأفلام
+### 🎬 Movie Explorer App
 
 ![Movie Explorer](movie-explorer.jpg)
 
-🔗 عرض مباشر  
+Movie search application using **TMDB API** to display movie posters, ratings, and details.
+
+🔗 Live Demo  
 https://semo1682.github.io/movie-explorer-app/
 
 ---
 
-### 📊 لوحة معلومات مالية
+### 📊 Finance Dashboard
 
 ![Finance Dashboard](finance-dashboard.jpg)
 
-🔗 عرض مباشر  
+Modern financial dashboard for displaying analytics, revenue, and overview cards.
+
+🔗 Live Demo  
 https://semo1682.github.io/finance-dashboard-pro/
 
 ---
 
-### 🌤 تطبيق الطقس
+### 🌤 Weather Forecast Pro
 
 ![Weather Forecast](weather-forecast.jpg)
 
-🔗 عرض مباشر  
+Weather application that displays current weather data with a clean responsive interface.
+
+🔗 Live Demo  
 https://semo1682.github.io/weather-forecast-pro/
 
 ---
 
-### 🖥 لوحة تحكم الادمن
+### 🚀 NexaFlow Landing Page
+
+![NexaFlow](nexaflow.jpg)
+
+Modern SaaS startup landing page with a professional and responsive design.
+
+🔗 Live Demo  
+https://semo1682.github.io/NexaFlow-Landing-Page/
+
+---
+
+### 🖥 Admin Dashboard
 
 ![Admin Dashboard](admin-dashboard.jpg)
 
-🔗 عرض مباشر  
+Modern admin dashboard interface with a clean layout and organized UI.
+
+🔗 Live Demo  
 https://semo1682.github.io/admin-dashboard/
 
 ---
 
-### ✅ مدير المهام
+### ✅ Task Manager Pro
 
 ![Task Manager](task-manager.jpg)
+
+Task management application for organizing daily tasks and improving productivity.
+
+🔗 Live Demo  
+https://semo1682.github.io/task-manager-pro/
+
 ---
 
-📫 Contact
+### 🎥 CineVerse Movie App
 
-📧 Email
+![CineVerse](cineverse.jpg)
+
+Modern movie browsing application using **TMDB API** with trending movies, top rated movies, categories, search, and trailer support.
+
+🔗 Live Demo  
+https://semo1682.github.io/cineverse-movie-app/
+
+---
+
+## 📫 Contact
+
+📧 Email  
 eslammesalaam@gmail.com
 
-💼 LinkedIn
+💼 LinkedIn  
 https://www.linkedin.com/in/islam-mesalam-47549637a
+
+💻 GitHub  
+https://github.com/semo1682
 
 ---
 
-⭐ If you like my work feel free to star the repository.
+⭐ If you like my work, feel free to star the repository.
