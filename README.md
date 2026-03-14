@@ -1,19 +1,19 @@
-🚀 Eslam Mesalam - Front-End Developer Portfolio
+👨‍💻 Eslam Mesalam — Front-End Developer Portfolio
 
-Welcome to my personal portfolio repository.
-This project showcases my Front-End Development skills and the projects I built using modern web technologies.
+Welcome to my portfolio repository.
+This repository showcases my front-end development projects built using modern web technologies like HTML, CSS, and JavaScript.
 
 🌐 Live Portfolio Website
 https://semo1682.github.io/eslam-portfolio/
 
 ---
 
-👨‍💻 About Me
+🚀 About Me
 
 Hi, I'm Eslam Mesalam
 A passionate Front-End Developer from Egypt focused on building modern, responsive, and user-friendly web interfaces.
 
-I enjoy creating beautiful UI and interactive web applications using modern technologies.
+I enjoy turning ideas into interactive digital experiences using clean and maintainable code.
 
 ---
 
@@ -32,7 +32,7 @@ I enjoy creating beautiful UI and interactive web applications using modern tech
 
 🛍 Style Mix Store
 
-Online fashion store landing page.
+Modern fashion store landing page.
 
 "Style Mix" (stylemix.jpg)
 
@@ -43,7 +43,7 @@ https://semo1682.github.io/style-mix-store/
 
 🎬 Movie Explorer App
 
-Movie search application using MovieDB API.
+Movie search application using TMDB API to display movie posters, ratings, and descriptions.
 
 "Movie Explorer" (movie-explorer.jpg)
 
@@ -54,7 +54,7 @@ https://semo1682.github.io/movie-explorer-app/
 
 📊 Finance Dashboard
 
-Modern financial dashboard UI.
+Modern financial dashboard interface displaying revenue and analytics.
 
 "Finance Dashboard" (finance-dashboard.jpg)
 
@@ -65,7 +65,7 @@ https://semo1682.github.io/finance-dashboard-pro/
 
 🌤 Weather Forecast Pro
 
-Weather application using API to display real-time weather data.
+Weather application that shows real-time weather information using API.
 
 "Weather Forecast" (weather-forecast.jpg)
 
@@ -76,7 +76,7 @@ https://semo1682.github.io/weather-forecast-pro/
 
 🚀 NexaFlow Landing Page
 
-Modern SaaS landing page design.
+Modern SaaS startup landing page design.
 
 "NexaFlow" (nexaflow.jpg)
 
@@ -87,7 +87,7 @@ https://semo1682.github.io/NexaFlow-Landing-Page/
 
 🖥 Admin Dashboard
 
-Modern admin dashboard UI design.
+Admin dashboard interface with modern UI layout.
 
 "Admin Dashboard" (admin-dashboard.jpg)
 
@@ -98,7 +98,7 @@ https://semo1682.github.io/admin-dashboard/
 
 ✅ Task Manager Pro
 
-Task management application to organize productivity.
+Task management application to organize daily tasks.
 
 "Task Manager" (task-manager.jpg)
 
